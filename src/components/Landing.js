@@ -214,7 +214,7 @@ const Landing = () => {
       </div>
       <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <img
-    src="/images/st_mathews_1.jpg"
+    src="/images/st_mathews_1.JPG"
     alt="Description of the image"
     className="w-full h-[580px] object-cover"
   />
@@ -236,7 +236,7 @@ const Landing = () => {
   In <b>The Journey of the Mayflower</b>, I collaborated with Hetain Patel and other artists to interpret and convey the emotional and historical narratives through movement. Filmed in Worksop, the project explores North Nottinghamshire's connection to the Mayflower's historic voyage, reflecting on the impact of those who made the journey and their lasting legacy. My role focused on supporting the Yard Theatre group with choreography and physical expression to embody and communicate these stories, adding depth and movement to the film's exploration of migration and identity.  
   </p>
   <img
-    src="/images/the_landing_1.jpg"
+    src="/images/the_landing_1.JPG"
     alt="Description of the image"
     className="w-full h-full object-cover"
   />
