@@ -138,18 +138,18 @@ const Landing = () => {
       </nav>
     }
     </section>
-    <section id="about" className="h-screen relative bg-gradient-to-r bg-[#FFEABE] from-black from-1% to-20%">
-        <div className="flex h-full items-center ml-20">
+    <section id="about" className="h-screen relative sm:bg-gradient-to-r bg-[#FFEABE] from-black from-1% to-15% sm:to-20%">
+        <div className="flex h-full items-center sm:ml-20">
         <img 
           src="/images/headDown.jpg"
-          className="h-[80%]"
+          className="h-[80%] sm:block hidden"
         />
 
-        <div className="w-full text-[110px] flex flex-col">
+        <div className="w-full sm:text-[110px] flex flex-col">
           <h1 className="font-medium">
             MY JOURNEY
           </h1>
-          <p className="text-justify text-[30px] px-6 py-3 m-auto w-[700px] bg-[#F9D593] shadow-2xl">
+          <p className="text-justify text-[30px] px-6 py-3 m-auto w-[80%] sm:w-[700px] bg-[#F9D593] shadow-2xl">
           <b>TENDA</b> is an artist dedicated to igniting creativity, fostering personal growth, and inspiring positive change. through the power of music.  
           </p>
         </div>
@@ -165,18 +165,18 @@ const Landing = () => {
     <iframe className='w-[80%] h-[40%] m-auto' src="https://www.youtube.com/embed/CFwVb498PCU?si=3xYkC_w4RaFPLm0b&amp;start=337" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe  className='w-[80%] h-[40%] m-auto' src="https://www.youtube.com/embed/g1Krl8-qwFY?si=CMeNHQryHErJ1zge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-    <section className="pt-10  bg-[#FFEABE] px-[100px] pb-[50px]">
+    <section className="pt-10  bg-[#FFEABE] px-8 sm:px-[100px] pb-[50px]">
       <div className="mb-7">
-      <h2 className="text-left bg-[#F9D593] w-max px-5 translate-y-7">My Work</h2>
-      <h1 className="text-left text-[100px] font-medium ">PROJECTS</h1>
+      <h2 className="text-left bg-[#F9D593] text-[25px] sm:text-[50px] w-max px-5 translate-y-2 sm:translate-y-7">My Work</h2>
+      <h1 className="text-left text-[50px] sm:text-[100px] font-medium ">PROJECTS</h1>
       {/* <div className="h-[3px]"/> */}
 
       </div>
       <div>
-      <div className="w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
-        <h3 className="italic">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
+      <div className=" w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
+        <h3 className="italic text-[30px] px-1 sm:text-[50px]">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
       </div>
-      <div className="project_content mt-5 grid grid-cols-2 gap-5 items-stretch">
+      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <img
     src="/images/SingWhatYou Mean_1.jpg"
     alt="Description of the image"
@@ -190,10 +190,10 @@ const Landing = () => {
 
       <div className="mt-[50px]">
       <div className="w-full bg-red-400 bg-[#F9D593] shadow-2xl">
-        <h3 className="italic uppercase">Spark Music Champions
-        </h3>
+      <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">spark music champions</h3>
+
       </div>
-      <div className="project_content mt-5 grid grid-cols-2 gap-5 items-stretch">
+      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   I am currently participating in the Spark Music Champions program, a 15-week initiative focused on early years (0–4 years) music-making in Leicester. This opportunity includes hands-on sessions, training, and mentoring, enabling me to develop innovative approaches to play-based musical interactions. My involvement is deepening my practice and expanding my skills in early years music education.
   </p>
@@ -210,9 +210,9 @@ const Landing = () => {
 
       <div className="mt-[50px]">
       <div className="w-full bg-yellow-200 bg-[#F9D593] shadow-2xl">
-        <h3 className="italic uppercase">CREATIVE PLAY</h3>
+        <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">CREATIVE PLAY</h3>
       </div>
-      <div className="project_content mt-5 grid grid-cols-2 gap-5 items-stretch">
+      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <img
     src="/images/st_mathews_1.jpg"
     alt="Description of the image"
@@ -229,9 +229,9 @@ const Landing = () => {
 
       <div>
       <div className="w-full bg-blue-100 shadow-2xl mt-10">
-        <h3 className="italic uppercase">THE LANDING</h3>
+        <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">THE LANDING</h3>
       </div>
-      <div className="project_content mt-5 grid grid-cols-2 gap-5 items-stretch">
+      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   In <b>The Journey of the Mayflower</b>, I collaborated with Hetain Patel and other artists to interpret and convey the emotional and historical narratives through movement. Filmed in Worksop, the project explores North Nottinghamshire's connection to the Mayflower's historic voyage, reflecting on the impact of those who made the journey and their lasting legacy. My role focused on supporting the Yard Theatre group with choreography and physical expression to embody and communicate these stories, adding depth and movement to the film's exploration of migration and identity.  
   </p>
@@ -246,13 +246,13 @@ const Landing = () => {
 
       </div>
     </section>
-    <section className="px-20 pb-10">
+    <section className="px-6 pb-10">
     <form 
       // onSubmit={handleSubmit}
       className="space-y-6 text-[30px] px-8 py-6 w-full">
         <div className="translate-y-5">
-      <h2 className="text-left bg-[#F9D593] w-max px-5 translate-y-7">Get in Touch</h2>
-      <h1 className="text-left text-[100px] font-medium ">CONTACT</h1>
+      <h2 className="text-left bg-[#F9D593] text-[25px] sm:text-[50px] w-max px-5 sm:translate-y-7">Get in Touch</h2>
+      <h1 className="text-left text-[50px] sm:text-[100px] font-medium ">CONTACT</h1>
       {/* <div className="h-[3px]"/> */}
 
       </div>
