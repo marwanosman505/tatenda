@@ -3,6 +3,8 @@ import { FaUser } from "react-icons/fa6";
 import { FaPaintBrush } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
+import ProjectTabs from "./ProjectTabs";
 
 
 const Landing = () => {
@@ -55,13 +57,26 @@ const Landing = () => {
   return (
     <>
     <section className="h-[120vh] flex flex-col items-center ">
-      <div className='backdrop-blur-lg w-full py-5 z-50 hidden sm:flex gap-10 justify-evenly'>
-        
-        <h1 className="text-[50px] uppercase z-20 text-white font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1>
-        <h1 className="text-[50px] uppercase z-20 text-white font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('projects')}>Projects</h1>
+      {/* <div className='backdrop-blur-lg w-full py-5 z-50 hidden sm:flex gap-10 justify-evenly'> */}
+      <div className=' w-full py-5 z-50 hidden sm:flex gap-10 justify-evenly absolute bottom-20'>
+      <nav className="relative backdrop-blur-2xl bg-[#F7AF5D]/90 px-7 py-2">
+        <h1
+          className="text-[50px] uppercase z-50 text-white font-bold text-center hover:cursor-pointer"
+          onClick={() => scrollToSection('projects')}
+        >
+          Projects
+        </h1>
+      </nav>
+
+      <nav className="relative bg-white backdrop-blur-2xl  px-7 py-2">
+      <h1 className="text-[50px] uppercase z-20 text-black font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1>
+
+      </nav>
+
+        {/* <h1 className="text-[50px] uppercase z-20 text-white font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1> */}
         {/* <h1 className="text-[50px] uppercase z-20 text-white font-bold text-center hover:cursor-pointer">Contact</h1> */}
       </div>
-      <div className='absolute h-[110px] backdrop-blur-xl w-full py-5 bg-black opacity-40 z-20 hidden sm:flex gap-10 justify-center' />
+      {/* <div className='absolute h-[110px] backdrop-blur-xl w-full py-5 bg-black opacity-40 z-20 hidden sm:flex gap-10 justify-center' /> */}
 {/* Background Image */}
   {/* Background Image */}
   <img
@@ -163,9 +178,8 @@ const Landing = () => {
     // alt="Background"
   />
     <iframe className='w-[80%] h-[40%] m-auto' src="https://www.youtube.com/embed/CFwVb498PCU?si=3xYkC_w4RaFPLm0b&amp;start=337" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe  className='w-[80%] h-[40%] m-auto' src="https://www.youtube.com/embed/g1Krl8-qwFY?si=CMeNHQryHErJ1zge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <section className="pt-10  bg-[#FFEABE] px-8 sm:px-[100px] pb-[50px]">
+    <iframe className='w-[80%] h-[40%] m-auto' src="https://www.youtube.com/embed/HVlZm4oZKoA?si=YwnEESUkPtKzU4D7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </section>
+    <section className="pt-10  bg-[#FFEABE] px-8 sm:px-[100px] pb-[50px]" id="projects">
       <div className="mb-7">
       <h2 className="text-left bg-[#F9D593] text-[25px] sm:text-[50px] w-max px-5 translate-y-2 sm:translate-y-7">My Work</h2>
       <h1 className="text-left text-[50px] sm:text-[100px] font-medium ">PROJECTS</h1>
@@ -173,21 +187,34 @@ const Landing = () => {
 
       </div>
       <div>
-      <div className=" w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
-        <h3 className="italic text-[30px] px-1 sm:text-[50px]">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
-      </div>
-      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
+        
+
+      {/* <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
   <img
     src="/images/SingWhatYou Mean_1.jpg"
     alt="Description of the image"
     className="w-full h-full object-cover"
   />
+
+  <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
+  By creating a safe, inclusive, and engaging environment, the program allowed participants to explore, express, and develop their musical voices while fostering confidence and creativity.  </p>
   <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   I participated in <b>"Sing What You Mean, Mean What You Play,"</b> a project led by Buzzing Roots and funded by Youth Music UK. This initiative supported neurodivergent young people in expressing themselves through music. Through songwriting and music production, I contributed to creating a safe, nurturing space where participants explored their emotions and personal stories, producing authentic and meaningful compositions.
   </p>
-</div>
-      </div>
+</div> */}
+  <div className=" w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
+    <h3 className="italic text-[30px] px-1 sm:text-[50px]">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
+    <img
+    src="/images/SingWhatYou Mean_1.jpg"
+    alt="Description of the image"
+    className="w-full h-[350px] object-cover"
+  />
+  </div>
+{/* <button className="mt-3 w-full bg-white flex gap-2 items-center justify-center">Read More <FaAngleDown/></button> */}
 
+<ProjectTabs/>
+      </div>
+      <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
       <div className="mt-[50px]">
       <div className="w-full bg-red-400 bg-[#F9D593] shadow-2xl">
       <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">spark music champions</h3>
