@@ -5,6 +5,9 @@ import { FaPhone } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import ProjectTabs from "./ProjectTabs";
+import { EffectFade, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 
 const Landing = () => {
@@ -12,7 +15,7 @@ const Landing = () => {
     const [shouldHide, setShouldHide] = useState(false);
     const [shouldShowIcons, setShowIcons] = useState(false);
     const [hasSubmited, setHasSubmited] = useState(false);
-
+  
 
       useEffect(() => {
     // Set a timeout matching the slide-in duration (e.g., 2s)
@@ -160,13 +163,12 @@ const Landing = () => {
           className="h-[80%] sm:block hidden"
         />
 
-        <div className="w-full sm:text-[110px] flex flex-col">
+        <div className="w-full sm:text-[100px] flex flex-col">
           <h1 className="font-medium">
             MY JOURNEY
           </h1>
-          <p className="text-justify text-[30px] px-6 py-3 m-auto w-[80%] sm:w-[700px] bg-[#F9D593] shadow-2xl">
-          <b>TENDA</b> is an artist dedicated to igniting creativity, fostering personal growth, and inspiring positive change. through the power of music.  
-          </p>
+          <p className="text-justify text-[25px]  px-6 py-3 m-auto w-[80%] sm:w-[700px] bg-[#F9D593] shadow-2xl">
+          Born and raised in Zimbabwe , <b>“TENDA”</b> is an artist who blends his African influences and lived experiences into his own musical practice. He started his music journey as a beat maker and producer but fell in love with the process of using song writing to tell compelling stories about his journey from childhood into adulthood . He blends different genres into his audio production and enjoys the art of sampling to create music that captivates and resonates with a range of people.          </p>
         </div>
 
         </div>
@@ -204,11 +206,47 @@ const Landing = () => {
 </div> */}
   <div className=" w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
     <h3 className="italic text-[30px] px-1 sm:text-[50px]">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
-    <img
+    <Swiper
+            modules={[EffectFade, Autoplay]}
+            // effect="fade"
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            className="h-full"
+          >
+            <SwiperSlide>
+              <img
+                src="/images/SingWhatYouMean_1.jpg"
+                alt="Workshop participant experimenting with music - Image 1"
+                className="w-full h-[380px] object-cover rounded-lg shadow"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/images/SingWhatYouMean_2.jpg"
+                alt="Workshop participant playing instruments - Image 2"
+                className="w-full h-[380px] object-cover object-bottom rounded-lg shadow"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/images/SingWhatYouMean_3.jpg"
+                alt="Children engaging in music activities - Image 3"
+                className="w-full h-[380px] object-cover object-bottom rounded-lg shadow"
+              />
+            </SwiperSlide>
+            {/* <SwiperSlide>
+              <img
+                src="/images/SingWhatYouMean_4.jpg"
+                alt="Children engaging in music activities - Image 3"
+                className="w-full h-[380px] object-cover object-left rounded-lg shadow"
+              />
+            </SwiperSlide> */}
+          </Swiper>
+    {/* <img
     src="/images/SingWhatYou Mean_1.jpg"
     alt="Description of the image"
     className="w-full h-[350px] object-cover"
-  />
+  /> */}
   </div>
 {/* <button className="mt-3 w-full bg-white flex gap-2 items-center justify-center">Read More <FaAngleDown/></button> */}
 
