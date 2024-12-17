@@ -7,6 +7,7 @@ import { FaAngleDown } from "react-icons/fa";
 import ProjectTabs from "./ProjectTabs";
 import { EffectFade, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Audio from "./Audio";
 
 
 
@@ -206,12 +207,14 @@ const Landing = () => {
 </div> */}
   <div className=" w-full bg-blue-100 bg-[#F9D593] shadow-2xl">
     <h3 className="italic text-[30px] px-1 sm:text-[50px]">SING WHAT YOU MEAN, MEAN WHAT YOU PLAY</h3>
+    <div className="h-[380px]">
+
     <Swiper
             modules={[EffectFade, Autoplay]}
             // effect="fade"
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
-            className="h-full"
+            className="h-full absolute top-0"
           >
             <SwiperSlide>
               <img
@@ -247,9 +250,11 @@ const Landing = () => {
     alt="Description of the image"
     className="w-full h-[350px] object-cover"
   /> */}
+  <Audio className=""/>
+    </div>
   </div>
 {/* <button className="mt-3 w-full bg-white flex gap-2 items-center justify-center">Read More <FaAngleDown/></button> */}
-
+{/* <Audio/> */}
 <ProjectTabs/>
       </div>
       <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
