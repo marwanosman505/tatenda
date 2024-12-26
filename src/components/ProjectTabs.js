@@ -18,6 +18,19 @@ export default function ProjectTabs() {
   }, [activeIndex]);
 
   useEffect(() => {
+    // Preload images for all tabs except the active one
+    tabsData.forEach((tab, idx) => {
+      if (idx !== activeIndex) {
+        tab.images.forEach((img) => {
+          const preloadImg = new Image();
+          preloadImg.src = img.src; // Browser caches it
+        });
+      }
+    });
+  }, [activeIndex]);
+  
+
+  useEffect(() => {
     // Set a timeout matching the slide-in duration (e.g., 2s)
     const timer = setTimeout(() => {
       // setShouldFlicker(true);
@@ -81,6 +94,7 @@ export default function ProjectTabs() {
         </button>
 
         {/* Audio Component (if you want it overlayed) */}
+        <div className='w-10 h-10 bg-black'/>
         <Audio />
       </div>
 

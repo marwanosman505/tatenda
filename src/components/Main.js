@@ -229,7 +229,14 @@ function Main() {
   return (
     <main className="App text-[50px]">
       <Landing/>
-      
+      <div className="text-[20px] bg-[#F7AF5D]/90 flex flex-col items-center justify-center py-4">
+          <p>
+            powered by <a className=" underline text-blue-500" target="_blank" href="https://netreach.uk">netreach.uk</a>
+          </p>
+          <p className="text-center text-black font-normal font-primary text-[20px]">
+            Copyright © All Right Reserved. tendamusic 2024
+          </p>
+        </div>
 
 
     
