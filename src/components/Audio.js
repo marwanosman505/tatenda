@@ -13,9 +13,11 @@ const Audio = () => {
 
   // Example list of audio tracks
   const tracks = [
-    { name: "Track 1", file: "/northside.mp3" },
-    { name: "Track 2", file: "/northside.mp3" },
-    { name: "Track 3", file: "/northside.mp3" },
+    { name: "Wonka Hogwarts", file: "/audio/02_WONKAHOGWORTS.mp3" },
+    { name: "The Vikings", file: "/audio/01_TheVikings.mp3" },
+    { name: "Land of the Disco", file: "/audio/02_LandOfTheDisco.mp3" },
+    { name: "Zombie Apocalypse", file: "/audio/03_ZombiApoceclypse.mp3" },
+    { name: "Sugary", file: "/audio/01_Sugary.mp3" },
   ];
 
   // Keep track of the currently selected track
@@ -170,7 +172,7 @@ const Audio = () => {
                 <li key={idx}>
                   <button
                     onClick={() => handleSelectTrack(track)}
-                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-[19px]"
                   >
                     {track.name}
                   </button>
