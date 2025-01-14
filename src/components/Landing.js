@@ -9,6 +9,7 @@ import { EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Audio from "./Audio";
+import Track from "./Track";
 
 
 
@@ -212,7 +213,22 @@ const Landing = () => {
 
         </div>
     </section>
+    {/* My Music Section */}
+    <section className=" m-0 pt-10 pb-10 bg-[#FFEABE] sm:bg-gradient-to-r bg-[#FFEABE] from-[#F9D593]/60 via-[#FFEABE] to-[#F9D593]/60"
+    >
+      <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F7AF5D] w-max px-8  mx-auto ">NEW TRACKS</h1>
+      <p className="text-[30px] w-[60%] m-auto my-5">Explore three of Tenda’s latest tracks, each defined by his genre-bending production.</p>
+      <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
+        {/* <div className="h-[0.5px] bg-black w-full"/> */}
+        <Track color={'red'} title={'Eternity'} genre={'Alternative R&B'} track={'/audio/Eternity.mp3'}/>
+        {/* <div className="h-[1px] bg-black w-full"/> */}
+        <Track color={'blue'} title={"Won't do for love"} genre={'Orchestral R&B'} track={'/audio/WontDoForLove.mp3'}/>
+        {/* <div className="h-[1px] bg-black w-full"/> */}
+        <Track color={'green'} title={'Venus'} genre={'Orchestral'} track={'/audio/Venus.mp3'}/>
+        {/* <div className="h-[0.5px] bg-black w-full"/> */}
 
+      </div>
+    </section>
     <section className=" bg-[#FFEABE] w-full  pb-[50px]" id="projects">
         <div className="bg-[#F7AF5D] w-full px-[100px] shadow-xl">
 
@@ -226,7 +242,7 @@ const Landing = () => {
         
 
       {/* <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
-  <img
+  <img¬
     src="/images/SingWhatYou Mean_1.jpg"
     alt="Description of the image"
     className="w-full h-full object-cover"
