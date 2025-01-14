@@ -1,5 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  safelist: [
+    {
+      pattern: /bg-(red|blue|green)-(100|300|500|800)/,
+    },
+    {
+      pattern: /border-(red|blue|green)-(800)/,
+    },
+  ],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {

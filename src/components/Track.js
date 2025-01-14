@@ -5,11 +5,32 @@ import { HiMiniSpeakerWave } from "react-icons/hi2";
 import { ImSpinner2 } from "react-icons/im";
 import { IoMusicalNotesSharp } from "react-icons/io5";
 
+const COLOR_CLASSES = {
+  red: {
+    background: "bg-red-500",
+    border: "border-red-800",
+    overlay: "bg-red-300/20",
+  },
+  blue: {
+    background: "bg-blue-500",
+    border: "border-blue-800",
+    overlay: "bg-blue-300/20",
+  },
+  green: {
+    background: "bg-green-500",
+    border: "border-green-800",
+    overlay: "bg-green-300/20",
+  },
+  // ...add more as needed
+};
+
 const Track = (props) => {
   const color = props.color;
   const title = props.title;
   const track = props.track;
   const genre = props.genre;
+
+  const classes = COLOR_CLASSES[color] ?? COLOR_CLASSES["red"];
 
   const [play, setPlay] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -128,11 +149,11 @@ const Track = (props) => {
     <div ref={containerRef} className="shadow-smz-50 opacity-90 min-w-[60%]">
       <div className="h-[140px] flex ">
         <span
-          className={`bg-${color}-500 border-8 border-${color}-800 w-[140px] flex items-center justify-center`}
-        >
+          className={`${classes.background} border-8 ${classes.border} w-[140px] flex items-center justify-center`}
+          >
           <IoMusicalNotesSharp className="text-white" />
         </span>
-        <div className={`flex flex-col gap-2 px-5 min-w-[400px] bg-${color}-300/20`}>
+        <div className={`flex flex-col gap-2 px-5 min-w-[400px] ${classes.overlay}`}>
           <div className="flex justify-between py-2">
             <h3 className="text-[20px] text-left font-medium">{title}</h3>
             <h3 className="text-[18px] text-left font-medium bg-gray-300 rounded-lg px-3 py-1">
