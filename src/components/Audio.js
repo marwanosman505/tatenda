@@ -143,7 +143,7 @@ const Audio = () => {
           </button>
 
           {/* Volume Control */}
-          <div className="mx-4 flex items-center">
+          <div className="mx-4 flex items-center sm:relative hidden">
             <input
               type="range"
               className="bg-transparent w-32 mr-2 accent-cyan-100"
@@ -159,7 +159,7 @@ const Audio = () => {
         </div>
 
         {/* Track Name & Dropdown Toggle */}
-        <div className="relative bg-white h-full text-[30px] flex items-center">
+        <div className="relative bg-white h-full text-[20px] sm:text-[30px] flex items-center">
           <button onClick={toggleDropdown} className="flex items-center px-5 h-full">
             {selectedTrack.name}
             {showDropdown ? <FaChevronUp className="ml-2" /> : <FaChevronDown className="ml-2" />}
@@ -172,7 +172,7 @@ const Audio = () => {
                 <li key={idx}>
                   <button
                     onClick={() => handleSelectTrack(track)}
-                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-[19px]"
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 sm:text-[19px]"
                   >
                     {track.name}
                   </button>

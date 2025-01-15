@@ -65,10 +65,10 @@ const Landing = () => {
     <section className="h-[120vh] flex flex-col items-center ">
       
       {/* <div className='backdrop-blur-lg w-full py-5 z-50 hidden sm:flex gap-10 justify-evenly'> */}
-      <div className=' w-full py-5 z-50 hidden sm:flex gap-10 justify-evenly absolute top-20'>
-      <nav className=" hover:cursor-pointer relative hover:scale-110 transition ease-in-out duration-200 -translate-x-[40px] backdrop-blur-2xl bg-[#F7AF5D]/90 px-7 py-2">
+      <div className=' w-full py-5 sm:z-50 flex  sm:gap-10 justify-evenly sm:relative sm:absolute sm:top-20 sm:text-[50px] text-[35px]'>
+      <nav className=" hover:cursor-pointer relative hover:scale-110 transition ease-in-out duration-200 sm:-translate-x-[40px] backdrop-blur-2xl bg-[#F7AF5D]/90 px-7 py-2">
         <h1
-          className="text-[50px] uppercase z-50 text-white font-bold text-center hover:cursor-pointer"
+          className=" uppercase z-50 text-white sm:relative font-bold text-center hover:cursor-pointer"
           onClick={() => scrollToSection('projects')}
         >
           Projects
@@ -76,7 +76,7 @@ const Landing = () => {
       </nav>
 
       <nav className=" hover:cursor-pointer relative hover:scale-110 transition ease-in-out duration-200 backdrop-blur-2xl -translate-x-[20px] bg-white px-7 py-2">
-      <h1 className="text-[50px] uppercase z-20 text-black font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1>
+      <h1 className=" uppercase z-20 text-black font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1>
 
       </nav>
 
@@ -120,10 +120,10 @@ const Landing = () => {
     {
       shouldShowIcons &&
       <div className="flex flex-col absolute bottom-20">
-        <h1 className="z-50 text-white text-[100px] uppercase font-medium">Tenda</h1>
-        <div className="w-full h-[2px] bg-white z-50 -translate-y-5"/>
+        <h1 className="z-50 text-white text-[80px] sm:text-[100px] uppercase font-medium">Tenda</h1>
+        <div className="w-[80%] m-auto sm:w-full h-[2px] bg-white z-50 -translate-y-3 sm:-translate-y-5"/>
 
-      <nav className="z-50 flex flex-row gap-10 h-min">
+      <nav className="z-50 flex flex-row gap-5 sm:gap-10 h-min">
         
         <a href="https://www.instagram.com/tendaa_music/" className="animate-zoomInFade z-50 rounded-full transition ease-in-out duration-300 sm:h-[100px] sm:w-[100px] hover:cursor-pointer hover:scale-110 h-[80px] w-[80px] bg-[#F6D692] flex justify-center text-orange-400 items-center text-xl">
           <svg className="hover:cursor-pointer hover:scale-[125%] trasition ease-in-out duration-200"  viewBox="0 0 48 48" fill="none">
@@ -187,17 +187,17 @@ const Landing = () => {
           className="h-[80%] sm:block hidden"
         />
 
-        <div className="w-full sm:text-[100px] py-3 flex flex-col">
+        <div className="w-full sm:text-[100px] py-3 mx-8 flex flex-col">
           <h1 className="font-medium">
             MY JOURNEY
           </h1>
-          <div className="bg-[#F9D593] text-[22px] py-3 flex flex-col gap-2 px-6 shadow-2xl w-min m-auto">
+          <div className="bg-[#F9D593] text-[22px] py-3 flex flex-col gap-2 sm:px-6 shadow-2xl sm:w-min m-auto">
 
           <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
           Born and raised in Zimbabwe, <b>"TENDA"</b> is an artist who blends African influences and personal experiences into my musical practice. Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
 
 </p>
-          <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+          <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] hidden sm:relative">
           As an early years practitioner, I design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I also plan to merge nature and art by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
 
 
@@ -217,7 +217,7 @@ const Landing = () => {
     <section className=" m-0 pt-10 pb-10 bg-[#FFEABE] sm:bg-gradient-to-r bg-[#FFEABE] from-[#F9D593]/60 via-[#FFEABE] to-[#F9D593]/60"
     >
       <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F7AF5D] w-max px-8  mx-auto ">NEW TRACKS</h1>
-      <p className="text-[30px] w-[60%] m-auto my-5">Explore three of Tenda’s latest tracks, each defined by his genre-bending production.</p>
+      <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">Explore three of Tenda’s latest tracks, each defined by his genre-bending production.</p>
       <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
         {/* <div className="h-[0.5px] bg-black w-full"/> */}
         <Track color={'red'} title={'Eternity'} genre={'Alternative R&B'} track={'/audio/Eternity.mp3'}/>
@@ -233,11 +233,11 @@ const Landing = () => {
         <div className="bg-[#F7AF5D] w-full px-[100px] shadow-xl">
 
       {/* <h2 className="text-left bg-[#F9D593] text-[25px] sm:text-[50px] w-max px-5 translate-y-2 sm:translate-y-7">My Work</h2> */}
-      <h1 className="text-left text-[50px] sm:text-[100px] font-medium mb-10 ">PROJECTS</h1>
+      <h1 className="text-center text-[50px] sm:text-[100px] font-medium mb-10 ">PROJECTS</h1>
       {/* <div className="h-[3px]"/> */}
 
       </div>
-      <div className="mb-7 w-full px-[100px]">
+      <div className="mb-7 w-full sm:px-[100px]">
       <div>
         
 
@@ -259,20 +259,24 @@ const Landing = () => {
 {/* <Audio/> */}
 <ProjectTabs/>
       </div>
-      <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
+      <h1 className="text-left text-[40px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
       <div className="mt-[50px]">
       <div className="w-full bg-red-400 bg-[#F9D593] shadow-2xl">
       <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">spark music champions</h3>
-
+      <img
+    src="/images/spark_music_1.jpg"
+    alt="Description of the image"
+    className="sm:hidden relative w-full h-full object-cover"
+  />
       </div>
-      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
-  <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
+      <div className="project_content sm:mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
+  <p className="text-justify text-[25px] sm:text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   I am currently participating in the Spark Music Champions program, a 15-week initiative focused on early years (0–4 years) music-making in Leicester. This opportunity includes hands-on sessions, training, and mentoring, enabling me to develop innovative approaches to play-based musical interactions. My involvement is deepening my practice and expanding my skills in early years music education.
   </p>
   <img
     src="/images/spark_music_1.jpg"
     alt="Description of the image"
-    className="w-full h-full object-cover"
+    className="sm:flex hidden w-full h-full object-cover"
   />
 </div>
 
@@ -284,13 +288,13 @@ const Landing = () => {
       <div className="w-full bg-yellow-200 bg-[#F9D593] shadow-2xl">
         <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">CREATIVE PLAY</h3>
       </div>
-      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
+      <div className="project_content sm:mt-5 grid sm:grid-cols-2 sm:gap-5 items-stretch">
   <img
     src="/images/st_mathews_1.JPG"
     alt="Description of the image"
     className="w-full h-[580px] object-cover"
   />
-  <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
+  <p className="text-justify text-[25px] sm:text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   I participated in the <b>St. Matthew’s Big Local initiative</b>, collaborating with nurseries and local communities to deliver interactive music workshops for children aged 0–5. These sessions integrated storytelling, rhythm, and play to support language development and creative growth. My work focused on nurturing children’s love for music by encouraging exploratory sound-making and creative engagement in Leicester’s vibrant community.
   </p>
 </div>
@@ -303,14 +307,19 @@ const Landing = () => {
       <div className="w-full bg-blue-100 shadow-2xl mt-10">
         <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">THE LANDING</h3>
       </div>
-      <div className="project_content mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
-  <p className="text-justify text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
+      <img
+    src="/images/the_landing_1.JPG"
+    alt="Description of the image"
+    className="w-full h-full sm:hidden object-cover"
+  />
+      <div className="project_content sm:mt-5 grid sm:grid-cols-2 gap-5 items-stretch">
+  <p className="text-justify text-[25px] sm:text-[30px] px-6 py-3 bg-[#F9D593] shadow-2xl">
   In <b>The Journey of the Mayflower</b>, I collaborated with Hetain Patel and other artists to interpret and convey the emotional and historical narratives through movement. Filmed in Worksop, the project explores North Nottinghamshire's connection to the Mayflower's historic voyage, reflecting on the impact of those who made the journey and their lasting legacy. My role focused on supporting the Yard Theatre group with choreography and physical expression to embody and communicate these stories, adding depth and movement to the film's exploration of migration and identity.  
   </p>
   <img
     src="/images/the_landing_1.JPG"
     alt="Description of the image"
-    className="w-full h-full object-cover"
+    className="hidden sm:flex w-full h-full object-cover"
   />
 </div>
 

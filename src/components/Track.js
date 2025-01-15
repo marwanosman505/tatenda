@@ -148,15 +148,16 @@ const Track = (props) => {
   return (
     <div ref={containerRef} className="shadow-smz-50 opacity-90 min-w-[60%]">
       <div className="h-[140px] flex ">
-        <span
-          className={`${classes.background} border-8 ${classes.border} w-[140px] flex items-center justify-center`}
-          >
-          <IoMusicalNotesSharp className="text-white" />
+      <span
+        className={`hidden lg:flex ${classes.background} border-8 ${classes.border} w-[140px] items-center justify-center`}
+        >
+        <IoMusicalNotesSharp className="text-white" />
         </span>
+
         <div className={`flex flex-col gap-2 px-5 min-w-[400px] ${classes.overlay}`}>
           <div className="flex justify-between py-2">
             <h3 className="text-[20px] text-left font-medium">{title}</h3>
-            <h3 className="text-[18px] text-left font-medium bg-gray-300 rounded-lg px-3 py-1">
+            <h3 className="text-[18px] text-left font-medium sm:bg-gray-300 rounded-lg px-3 py-1">
               # {genre}
             </h3>
           </div>

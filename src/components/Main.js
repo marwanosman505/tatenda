@@ -233,7 +233,7 @@ function Main() {
           <p>
             powered by <a className=" underline text-blue-500" target="_blank" href="https://netreach.uk">netreach.uk</a>
           </p>
-          <p className="text-center text-black font-normal font-primary text-[20px]">
+          <p className="text-center text-black font-normal font-primary text-[15px] sm:text-[20px]">
             Copyright © All Right Reserved. tendamusic 2024
           </p>
         </div>
