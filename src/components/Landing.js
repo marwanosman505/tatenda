@@ -18,6 +18,7 @@ const Landing = () => {
     const [shouldHide, setShouldHide] = useState(false);
     const [shouldShowIcons, setShowIcons] = useState(false);
     const [hasSubmited, setHasSubmited] = useState(false);
+    const [activeTrackId, setActiveTrackId] = useState(null);
   
 
       useEffect(() => {
@@ -58,6 +59,39 @@ const Landing = () => {
     }
   }
 
+
+  const tracksData = [
+    {
+      id: "1",
+      color: "red",
+      title: "Eternity",
+      genre: "Alternative R&B",
+      track: "/audio/Eternity.mp3",
+      img: '/images/eternity_2.jpg'
+    },
+    {
+      id: "2",
+      color: "blue",
+      title: "Won’t do for love",
+      genre: "Orchestral R&B",
+      track: "/audio/WontDoForLove.mp3",
+      img: '/images/wontDoForLove_2.jpg'
+    },
+    {
+      id: "3",
+      color: "white",
+      title: "Venus",
+      genre: "Orchestral",
+      track: "/audio/Venus.mp3",
+      img: '/images/venus.jpg'
+    },
+  ];
+
+    // Handler when a track tries to play
+    const handlePlayRequest = (trackId) => {
+      // If the user clicks play on a new track, make that track active
+      setActiveTrackId(trackId);
+    };
 
 
   return (
@@ -194,19 +228,14 @@ const Landing = () => {
           <div className="bg-[#F9D593] text-[22px] py-3 flex flex-col gap-2 sm:px-6 shadow-2xl sm:w-min m-auto">
 
           <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
-          Born and raised in Zimbabwe, <b>"TENDA"</b> is an artist who blends African influences and personal experiences into my musical practice. Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
-
-</p>
-          <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] hidden sm:relative">
+          Born and raised in Zimbabwe, <b>"TENDA"</b> is an artist who blends African influences and personal experiences into musical practices.
+        </p>
+        <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+        Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
+        </p>
+        <p className="text-justify m-auto w-[80%] sm:w-[700px] hidden bg-[#F9D593] sm:flex">
           As an early years practitioner, I design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I also plan to merge nature and art by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
-
-
-
-
-
-
-
-</p>
+        </p>
 
           </div>
         </div>
@@ -214,21 +243,43 @@ const Landing = () => {
         </div>
     </section>
     {/* My Music Section */}
-    <section className=" m-0 pt-10 pb-10 bg-[#FFEABE] sm:bg-gradient-to-r bg-[#FFEABE] from-[#F9D593]/60 via-[#FFEABE] to-[#F9D593]/60"
-    >
-      <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F7AF5D] w-max px-8  mx-auto ">NEW TRACKS</h1>
-      <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">Explore three of Tenda’s latest tracks, each defined by his genre-bending production.</p>
+    <section className="m-0 pt-10 pb-10 bg-[#FFEABE]">
+      <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max px-8 mx-auto">
+        NEW TRACKS
+      </h1>
+      <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">
+        Explore three of Tenda’s latest tracks, each defined by his genre-bending production.
+      </p>
       <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
-        {/* <div className="h-[0.5px] bg-black w-full"/> */}
-        <Track color={'red'} title={'Eternity'} genre={'Alternative R&B'} track={'/audio/Eternity.mp3'}/>
-        {/* <div className="h-[1px] bg-black w-full"/> */}
-        <Track color={'blue'} title={"Won't do for love"} genre={'Orchestral R&B'} track={'/audio/WontDoForLove.mp3'}/>
-        {/* <div className="h-[1px] bg-black w-full"/> */}
-        <Track color={'green'} title={'Venus'} genre={'Orchestral'} track={'/audio/Venus.mp3'}/>
-        {/* <div className="h-[0.5px] bg-black w-full"/> */}
-
+        {tracksData.map((trackInfo) => (
+          <Track
+            key={trackInfo.id}
+            color={trackInfo.color}
+            title={trackInfo.title}
+            img={trackInfo.img}
+            genre={trackInfo.genre}
+            track={trackInfo.track}
+            trackId={trackInfo.id}
+            isActive={activeTrackId === trackInfo.id}
+            onPlayRequest={handlePlayRequest}
+          />
+        ))}
       </div>
     </section>
+
+
+    {/* <section className=" m-0 pt-10 pb-10 bg-[#FFEABE] sm:bg-gradient-to-r bg-[#FFEABE] from-[#F9D593]/60 via-[#FFEABE] to-[#F9D593]/60"
+    >
+      <h1 className="text-left text-[50px] sm:text-[80px] bg-[] font-medium bg-[#F7AF5D] w-max px-8  mx-auto ">NEW MUSIC</h1>
+      <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">Explore some of my latest work, each defined by genre-bending production.</p>
+      <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
+        <Track color={'red'} title={'Eternity'} genre={'Alternative R&B'} track={'/audio/Eternity.mp3'} img={'/images/eternity_2.jpg'}/>
+        <Track color={'blue'} title={"Won't do for love"} genre={'Orchestral R&B'} track={'/audio/WontDoForLove.mp3'} img={'/images/wontDoForLove_2.jpg'}/>
+        <Track color={'white'} title={'Venus'} genre={'Orchestral'} track={'/audio/Venus.mp3'} img={'/images/venus.jpg'}/>
+        
+
+      </div>
+    </section> */}
     <section className=" bg-[#FFEABE] w-full  pb-[50px]" id="projects">
         <div className="bg-[#F7AF5D] w-full px-[100px] shadow-xl">
 
@@ -257,7 +308,11 @@ const Landing = () => {
 
 {/* <button className="mt-3 w-full bg-white flex gap-2 items-center justify-center">Read More <FaAngleDown/></button> */}
 {/* <Audio/> */}
-<ProjectTabs/>
+<ProjectTabs
+  onPlayRequest={handlePlayRequest}
+  trackId={'4'}
+  isActive={activeTrackId === '4'}
+/>
       </div>
       <h1 className="text-left text-[40px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
       <div className="mt-[50px]">

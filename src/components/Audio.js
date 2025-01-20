@@ -3,7 +3,11 @@ import { FaPlay, FaPause, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { HiMiniSpeakerWave } from "react-icons/hi2";
 import { ImSpinner2 } from "react-icons/im";
 
-const Audio = () => {
+const Audio = (props) => {
+  const trackId = props.trackId;
+  const isActive = props.isActive;
+  const onPlayRequest = props.onPlayRequest;
+
   const [play, setPlay] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -30,23 +34,46 @@ const Audio = () => {
   // Volume range
   const MAX = 20;
 
-  // Toggle audio play/pause manually
-  const toggleAudio = async () => {
+    // 1. If a track is not active, ensure we pause
+    // 2. If track becomes active, check if we should resume playing
+    useEffect(() => {
+      if (!audioRef.current) return;
+  
+      if (!isActive) {
+        // If we're not the active track, force pause
+        setPlay(false);
+        audioRef.current.pause();
+      } else {
+        // If we *are* the active track, but "play" was true, resume
+        if (play) {
+          // Attempt to keep playing
+          audioRef.current.play().catch((err) => {
+            console.error("Could not play:", err);
+            setPlay(false);
+          });
+        }
+      }
+    }, [isActive]);
+
+  // Manually toggling play/pause
+  const handleToggle = async () => {
     if (!audioRef.current) return;
 
     if (play) {
-      // User manually paused => disable future auto-play
-      setUserHasPaused(true);
+      // Pause
       setPlay(false);
       audioRef.current.pause();
     } else {
+      // Before playing, request to be the active track
+      onPlayRequest(trackId);
+
+      // Then attempt to play
       setLoading(true);
       setPlay(true);
-      setUserHasPaused(false); // They played again manually, so auto-play can resume in future
       try {
         await audioRef.current.play();
       } catch (err) {
-        console.error("Autoplay or manual play was blocked by the browser:", err);
+        console.error("Manual play blocked:", err);
         setPlay(false);
       }
       setLoading(false);
@@ -132,7 +159,7 @@ const Audio = () => {
       <div className="h-[100px] flex">
         <div className="flex justify-center bg-blue-200 items-center px-5 py-5">
           {/* Play/Pause Button */}
-          <button onClick={toggleAudio}>
+          <button onClick={handleToggle}>
             {loading ? (
               <ImSpinner2 className="animate-spin" />
             ) : play ? (

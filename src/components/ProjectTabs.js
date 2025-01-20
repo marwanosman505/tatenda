@@ -4,7 +4,11 @@ import Audio from "./Audio";
 // Import your tabsData array
 import { tabsData } from '../tabsData';
 
-export default function ProjectTabs() {
+export default function ProjectTabs(props) {
+  const trackId = props.trackId;
+  const isActive = props.isActive;
+  const onPlayRequest = props.onPlayRequest;
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [height, setHeight] = useState('auto');
   const contentRef = useRef(null);
@@ -95,7 +99,11 @@ export default function ProjectTabs() {
 
         {/* Audio Component (if you want it overlayed) */}
         <div className='w-10 h-10 bg-black'/>
-        <Audio />
+        <Audio 
+          onPlayRequest={onPlayRequest}
+          trackId={trackId}
+          isActive={isActive}
+        />
       </div>
 
       {/* Tabs Navigation */}

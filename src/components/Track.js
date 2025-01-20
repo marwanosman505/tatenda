@@ -21,14 +21,23 @@ const COLOR_CLASSES = {
     border: "border-green-800",
     overlay: "bg-green-300/20",
   },
+  white: {
+    background: "bg-indigo-500",
+    border: "border-indigo-800",
+    overlay: "bg-indigo-300/20",
+  },
   // ...add more as needed
 };
 
 const Track = (props) => {
+  const trackId = props.trackId;
+  const isActive = props.isActive;
+  const onPlayRequest = props.onPlayRequest;
   const color = props.color;
   const title = props.title;
   const track = props.track;
   const genre = props.genre;
+  const img = props.img;
 
   const classes = COLOR_CLASSES[color] ?? COLOR_CLASSES["red"];
 
@@ -48,6 +57,27 @@ const Track = (props) => {
     { name: "Sugary", file: "/audio/01_Sugary.mp3" },
   ];
 
+  // 1. If a track is not active, ensure we pause
+  // 2. If track becomes active, check if we should resume playing
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    if (!isActive) {
+      // If we're not the active track, force pause
+      setPlay(false);
+      audioRef.current.pause();
+    } else {
+      // If we *are* the active track, but "play" was true, resume
+      if (play) {
+        // Attempt to keep playing
+        audioRef.current.play().catch((err) => {
+          console.error("Could not play:", err);
+          setPlay(false);
+        });
+      }
+    }
+  }, [isActive]);
+
   // Keep track of the currently selected track
   const [selectedTrack, setSelectedTrack] = useState(tracks[0]);
 
@@ -59,23 +89,25 @@ const Track = (props) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  // Toggle audio play/pause manually
-  const toggleAudio = async () => {
+  // Manually toggling play/pause
+  const handleToggle = async () => {
     if (!audioRef.current) return;
 
     if (play) {
-      // User manually paused => disable future auto-play
-      setUserHasPaused(true);
+      // Pause
       setPlay(false);
       audioRef.current.pause();
     } else {
+      // Before playing, request to be the active track
+      onPlayRequest(trackId);
+
+      // Then attempt to play
       setLoading(true);
       setPlay(true);
-      setUserHasPaused(false); // They played again manually, so auto-play can resume in future
       try {
         await audioRef.current.play();
       } catch (err) {
-        console.error("Autoplay or manual play was blocked by the browser:", err);
+        console.error("Manual play blocked:", err);
         setPlay(false);
       }
       setLoading(false);
@@ -149,8 +181,9 @@ const Track = (props) => {
     <div ref={containerRef} className="shadow-smz-50 opacity-90 min-w-[60%]">
       <div className="h-[140px] flex ">
       <span
-        className={`hidden lg:flex ${classes.background} border-8 ${classes.border} w-[140px] items-center justify-center`}
+        className={`hidden lg:flex ${classes.background}  ${classes.border} w-[140px] items-center justify-center`}
         >
+          <img src={img}></img>
         <IoMusicalNotesSharp className="text-white" />
         </span>
 
@@ -163,7 +196,7 @@ const Track = (props) => {
           </div>
           <div className="flex w-full text-[65px] items-center">
             {/* Play/Pause Button */}
-            <button onClick={toggleAudio}>
+            <button onClick={handleToggle}>
               {loading ? (
                 <ImSpinner2 className="animate-spin" />
               ) : play ? (
