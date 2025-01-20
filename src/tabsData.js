@@ -24,7 +24,7 @@ export const tabsData = [
             that felt authentic to them.
           </p>
           <p className="mb-4 text-justify">
-            Collabirating with <b>Mr Shae</b>, my role involved bringing each session to life, getting to
+            Collabirating with <b>Mr Shay</b>, my role involved bringing each session to life, getting to
             know every child, and fostering a safe, confident, and
             creative environment.
           </p>
