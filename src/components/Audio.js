@@ -115,44 +115,44 @@ const Audio = (props) => {
   };
 
   // Auto-play when the component scrolls into view, unless user paused
-  useEffect(() => {
-    if (!containerRef.current || !audioRef.current) return;
+  // useEffect(() => {
+  //   if (!containerRef.current || !audioRef.current) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(async (entry) => {
-          // If scrolled into view
-          if (entry.isIntersecting) {
-            // Attempt auto-play if not already playing, user hasn't paused
-            if (!play && !userHasPaused) {
-              setLoading(true);
-              setPlay(true);
-              try {
-                await audioRef.current.play();
-              } catch (err) {
-                console.error("Autoplay failed or was prevented:", err);
-                setPlay(false);
-              }
-              setLoading(false);
-            }
-          } else {
-            // If scrolled out of view and it's playing, pause it
-            if (play) {
-              // setPlay(false);
-              // audioRef.current.pause();
-            }
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust as needed
-    );
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach(async (entry) => {
+  //         // If scrolled into view
+  //         if (entry.isIntersecting) {
+  //           // Attempt auto-play if not already playing, user hasn't paused
+  //           if (!play && !userHasPaused) {
+  //             setLoading(true);
+  //             setPlay(true);
+  //             try {
+  //               await audioRef.current.play();
+  //             } catch (err) {
+  //               console.error("Autoplay failed or was prevented:", err);
+  //               setPlay(false);
+  //             }
+  //             setLoading(false);
+  //           }
+  //         } else {
+  //           // If scrolled out of view and it's playing, pause it
+  //           if (play) {
+  //             // setPlay(false);
+  //             // audioRef.current.pause();
+  //           }
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 } // Adjust as needed
+  //   );
 
-    observer.observe(containerRef.current);
+  //   observer.observe(containerRef.current);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [play, userHasPaused]);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, [play, userHasPaused]);
 
   return (
     <div ref={containerRef} className="absolute shadow-sm top-5 z-50 opacity-90">

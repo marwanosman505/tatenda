@@ -90,6 +90,7 @@ const Landing = () => {
     // Handler when a track tries to play
     const handlePlayRequest = (trackId) => {
       // If the user clicks play on a new track, make that track active
+      console.log(trackId);
       setActiveTrackId(trackId);
     };
 
@@ -234,7 +235,7 @@ const Landing = () => {
         Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
         </p>
         <p className="text-justify m-auto w-[80%] sm:w-[700px] hidden bg-[#F9D593] sm:flex">
-          As an early years practitioner, I design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I also plan to merge nature and art by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
+          As an early years musician, I also designed play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I also plan to merge nature and technology by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
         </p>
 
           </div>
@@ -244,12 +245,12 @@ const Landing = () => {
     </section>
     {/* My Music Section */}
     <section className="m-0 pt-10 pb-10 bg-[#FFEABE]">
-      <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max px-8 mx-auto">
-        NEW TRACKS
+      <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max mb-10 px-8 mx-auto">
+        MY RECENT WORK
       </h1>
-      <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">
+      {/* <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">
         Explore three of Tenda’s latest tracks, each defined by his genre-bending production.
-      </p>
+      </p> */}
       <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
         {tracksData.map((trackInfo) => (
           <Track
@@ -310,8 +311,8 @@ const Landing = () => {
 {/* <Audio/> */}
 <ProjectTabs
   onPlayRequest={handlePlayRequest}
-  trackId={'4'}
-  isActive={activeTrackId === '4'}
+  trackId={"4"}
+  isActive={activeTrackId === "4"}
 />
       </div>
       <h1 className="text-left text-[40px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
