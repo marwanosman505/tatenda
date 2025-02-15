@@ -111,7 +111,7 @@ const Landing = () => {
       </nav>
 
       <nav className=" hover:cursor-pointer relative hover:scale-110 transition ease-in-out duration-200 backdrop-blur-2xl -translate-x-[20px] bg-white px-7 py-2">
-      <h1 className=" uppercase z-20 text-black font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('about')}>About</h1>
+      <h1 className=" uppercase z-20 text-black font-bold text-center hover:cursor-pointer" onClick={() => scrollToSection('music')}>Music</h1>
 
       </nav>
 
@@ -244,7 +244,7 @@ const Landing = () => {
         </div>
     </section>
     {/* My Music Section */}
-    <section className="m-0 pt-10 pb-10 bg-[#FFEABE]">
+    <section className="m-0 pt-10 pb-10 bg-[#FFEABE]" id="music">
       <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max mb-10 px-8 mx-auto">
         MY RECENT WORK
       </h1>
