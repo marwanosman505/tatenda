@@ -50,7 +50,7 @@ const Track = (props) => {
 
   // Example list of audio tracks
   const tracks = [
-    { name: "Wonka Hogwarts", file: "/audio/02_WONKAHOGWORTS.mp3" },
+    { name: " Hogwarts", file: "/audio/02_WONKAHOGWORTS.mp3" },
     { name: "The Vikings", file: "/audio/01_TheVikings.mp3" },
     { name: "Land of the Disco", file: "/audio/02_LandOfTheDisco.mp3" },
     { name: "Zombie Apocalypse", file: "/audio/03_ZombiApoceclypse.mp3" },

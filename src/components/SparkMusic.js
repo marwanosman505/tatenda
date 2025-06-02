@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
-import Audio from "./Audio";
+import SparkMusicAudio from "./SparkMusicAudio";
 // Import your sparkData array
 import { sparkData } from '../sparkData';
 
@@ -97,9 +97,9 @@ export default function SparkMusic(props) {
           <FaArrowCircleRight />
         </button>
 
-        {/* Audio Component (if you want it overlayed) */}
+        {/* SparkMusicAudio Component (if you want it overlayed) */}
         <div className='w-10 h-10 bg-black'/>
-        <Audio 
+        <SparkMusicAudio 
           onPlayRequest={onPlayRequest}
           trackId={trackId}
           isActive={isActive}
