@@ -1,138 +1,129 @@
-// data/tabsData.js (example file - or just define inline)
+
+  // data/tabsData.js (example file - or just define inline)
 export const tabsData = [
-    {
-      id: 'overview',
-      title: 'Overview',
-      images: [
-        { src: '/images/SingWhatYouMean_1.jpg', alt: 'Workshop participant experimenting with music - Image 1' },
-        { src: '/images/SingWhatYouMean_4.jpg', alt: 'Workshop participant playing instruments - Image 2' },
-      ],
-      content: (
-        <>
-          <p className="mb-4 text-justify">
-            The project launched in November 2023 in partnership with
-            Queensmead Primary Academy and Folville Junior School in
-            Leicester. We alternated sessions weekly between the two
-            schools, beginning with introductory activities aimed at
-            building rapport and establishing trust with the young
-            participants.
-          </p>
-          <p className="mb-4 text-justify">
-            The “Sing What You Mean, Mean What You Play” project focused
-            on providing neurodivergent children aged 8–10 with
-            opportunities to explore music and express themselves in ways
-            that felt authentic to them.
-          </p>
-          <p className="mb-4 text-justify">
-            Collabirating with <b>Mr Shay</b>, my role involved bringing each session to life, getting to
-            know every child, and fostering a safe, confident, and
-            creative environment.
-          </p>
-        </>
-      ),
-    },
-    {
-      id: 'activities',
-      title: 'Activities',
-      images: [
-        // { src: '/images/SingWhatYouMean_3.jpg', alt: 'Children engaging in music activities - Image 3' },
-        { src: '/images/SingWhatYouMean_5.jpg', alt: 'Workshop participant experimenting with music - Image 1' },
-      ],
-      content: (
-        <>
-          <p className="mb-4 text-justify">
-            We started each session with fun games like "Pass the Clap,"
-            "Don’t Clap This One Back," and voice-projection exercises to
-            help the kids feel comfortable and break the ice. Journaling
-            became a big part of the sessions—it gave the children a way
-            to jot down ideas and explore their creativity.
-          </p>
-          <p className="mb-4 text-justify">
-            We also introduced loop pedals, which quickly became a hit,
-            sparking excitement and imaginative soundscapes.
-          </p>
-          <p className="mb-4 text-justify">
-            The children were split into small groups to keep things
-            personal. At Folville, the kids enjoyed one-on-one time, where
-            they could focus without feeling overwhelmed. Meanwhile,
-            Queensmead’s group loved working together, feeding off each
-            other’s energy. We always had a quiet room available for
-            anyone who needed to take a breather—it was all about making
-            sure everyone felt at ease.
-          </p>
-        </>
-      ),
-    },
-    {
-      id: 'challenges',
-      title: 'Challenges',
-      images: [
-        { src: '/images/SingWhatYouMean_7.jpg', alt: 'Workshop participant playing instruments - Image 2' },
-      ],
-      content: (
-        <>
-          <p className="mb-4 text-justify">
-            <b>Behavior and Focus at School 1</b> <br />
-            Some children struggled with focus and behavior in sessions.
-            To address this, we encouraged them to create their own rules
-            and expectations for the workshops. This approach fostered a
-            sense of ownership and responsibility, improving overall
-            engagement.
-          </p>
-          <p className="mb-4 text-justify">
-            <b>Reserved Nature at School 2</b> <br />
-            Participants at Folville were more reserved and hesitant to
-            share ideas. Journaling and one-on-one activities provided a
-            safe space for these children to express themselves at their
-            own pace.
-          </p>
-          <p className="mb-4 text-justify">
-            <b>Balancing Individual and Group Dynamics</b> <br />
-            At school 2, one-on-one activities were most effective, while
-            at school 1, the children thrived in group settings. Adapting
-            activities to suit each school’s dynamics was a key part of
-            the project’s success.
-          </p>
-        </>
-      ),
-    },
-    {
-      id: 'reflection',
-      title: 'Reflection',
-      images: [
-        { src: '/images/SingWhatYouMean_6.jpg', alt: 'Children engaging in music activities - Image 3' },
-      ],
-      content: (
-        <>
-          <p className="mb-4 text-justify">
-            Looking back, the project was an incredible experience.
-          </p>
-          <ul className="mb-4 text-left list-disc list-inside">
-            <li>
-              The children’s growth in confidence was so inspiring—seeing
-              them light up when sharing their music made everything worth
-              it.
-            </li>
-            <li>
-              One parent said,{" "}
-              <b>
-                “I’ve never seen my child this confident before—it’s
-                amazing to watch them shine.”
-              </b>
-            </li>
-            <li>
-              Teachers were equally positive, noticing how much the kids
-              looked forward to and engaged with the sessions.
-            </li>
-          </ul>
-          <p className="mb-4 text-justify">
-            This project reminded me of how powerful music can be for
-            self-expression and connection. It was a privilege to guide
-            these young people through their musical journeys, and I’m
-            excited to keep building on what we’ve learned together.
-          </p>
-        </>
-      ),
-    },
-  ];
+  {
+    id: 'overview',
+    title: 'Overview',
+    images: [
+      { src: '/images/SingWhatYouMean_1.jpg', alt: 'Workshop participant experimenting with music - Image 1' },
+      { src: '/images/SingWhatYouMean_4.jpg', alt: 'Workshop participant playing instruments - Image 2' },
+    ],
+    content: (
+      <>
+        <p className="mb-4 text-justify">
+        The Sing What You Mean, Mean What You Play project was all about giving neurodivergent
+young people the opportunity to explore music in ways that felt authentic, accessible, and
+empowering. We partnered with two schools, with the support of our incredible programme
+coordinators at <b>Buzzing Roots</b>, led by <b>Nicola Middler</b>, and made possible through funding
+from <b>Youth Music UK</b>.
+
+        </p>
+        <p className="mb-4 text-justify">
+        Working with children aged 5–11, the project aimed to create a space where creativity, self-
+expression, and confidence could grow through music. My role, alongside Akshay Sharma 
+<b> (Mr Shay)</b>, was to co-design and deliver sessions that were child-led and responsive, while
+also supporting teachers and families through CPD so the impact could carry on beyond our
+workshops.
+        </p>
+
+      </>
+    ),
+  },
+  {
+    id: 'activities',
+    title: 'Activities',
+    images: [
+      // { src: '/images/SingWhatYouMean_3.jpg', alt: 'Children engaging in music activities - Image 3' },
+      { src: '/images/spark_v2_3.jpg', alt: 'Workshop participant experimenting with music - Image 1' },
+    ],
+    content: (
+      <>
+        <p className="mb-4 text-justify">
+        Each session began with engaging games like “Pass the Clap,” “Don’t Clap This One Back,”
+and voice-projection activities—fun, simple ways to build connection, focus, and confidence.
+We introduced creative tools like loop pedals, digital audio workstations, and journaling,
+allowing children to express themselves in the ways that suited them best.
+        </p>
+        <p className="mb-4 text-justify">
+        The sessions were kept small and flexible. At one school, group dynamics worked
+beautifully, while at the other, one-on-one activities were more effective. We always made
+space for autonomy and quiet reflection, and a calm room was available during every
+session for children needing a sensory break.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 'challenges',
+    title: 'Challenges',
+    images: [
+      { src: '/images/spark_v2_4.jpg', alt: 'Workshop participant playing instruments - Image 2' },
+    ],
+    content: (
+      <>
+        <p className="mb-4 text-justify">
+          <b>Behavior and Focus at School 1</b> <br />
+          School 1 presented some challenges around behaviour and focus, particularly during open-
+ended or unstructured activities. To address this, we invited the children to co-create session
+rules and expectations. This helped instil a sense of ownership, and once in place, it
+noticeably improved participation and energy.
+        </p>
+        <p className="mb-4 text-justify">
+          <b>Reserved Nature at School 2</b> <br />
+          School 2 was much more reserved. Many of the children preferred quiet, individual activities
+and needed extra time to feel comfortable expressing themselves. Journaling, solo sound
+exploration, and gentle structure gave them the space to engage in their own time.
+        </p>
+        <p className="mb-4 text-justify">
+          <b>Balancing Individual and Group Dynamics</b> <br />
+          Navigating these different needs reinforced the importance of listening, flexibility, and
+creating environments where every kind of learner feels seen, supported, and safe.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 'reflection',
+    title: 'Reflection',
+    images: [
+      { src: '/images/spark_v2_5.jpg', alt: 'Children engaging in music activities - Image 3' },
+    ],
+    content: (
+      <>
+        <p className="mb-4 text-justify">
+        Some of the most powerful moments came when we found the right creative tools for each
+child. One participant thrived with the loop pedal, lighting up while layering their own voice
+and beats. Another was most engaged when working solo in the digital audio workstation,
+completely immersed in the process. Others connected most through visual and sensory
+prompts—tactile resources and calm, hands-on tools helped unlock their creativity.
+        </p>
+        <p className="mb-4 text-justify">
+        These stories were echoed in our CPD session at School 1, where we shared our child-led
+        methods and hands-on techniques with staff. The response was incredibly positive:
+        </p>
+        <ul className="mb-4 text-left list-disc list-inside">
+          <li>
+          “Absolutely brilliant – Tenda was fantastic. Lots of new ideas to use.”
+          </li>
+          <li>
+            One parent said,{" "}
+            <b>
+            “The speaker was amazing – I was fully engaged and found it very interesting.”
+            </b>
+          </li>
+          <li>
+          “Really great for building connections between pupils in different ways.”
+          </li>
+        </ul>
+        <p className="mb-4 text-justify">
+          This project reminded me of how powerful music can be for
+          self-expression and connection. It was a privilege to guide
+          these young people through their musical journeys, and I’m
+          excited to keep building on what we’ve learned together.
+        </p>
+      </>
+    ),
+  },
+];
+
   

@@ -10,6 +10,7 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Audio from "./Audio";
 import Track from "./Track";
+import SparkMusic from "./SparkMusic";
 
 
 
@@ -235,7 +236,7 @@ const Landing = () => {
         Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
         </p>
         <p className="text-justify m-auto w-[80%] sm:w-[700px] hidden bg-[#F9D593] sm:flex">
-          As an early years musician, I also designed play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I also plan to merge nature and technology by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
+          As an early years musician, I also design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I've begun to merge nature and technology by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
         </p>
 
           </div>
@@ -244,29 +245,7 @@ const Landing = () => {
         </div>
     </section>
     {/* My Music Section */}
-    <section className="m-0 pt-10 pb-10 bg-[#FFEABE]" id="music">
-      <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max mb-10 px-8 mx-auto">
-        MY RECENT WORK
-      </h1>
-      {/* <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">
-        Explore three of Tenda’s latest tracks, each defined by his genre-bending production.
-      </p> */}
-      <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
-        {tracksData.map((trackInfo) => (
-          <Track
-            key={trackInfo.id}
-            color={trackInfo.color}
-            title={trackInfo.title}
-            img={trackInfo.img}
-            genre={trackInfo.genre}
-            track={trackInfo.track}
-            trackId={trackInfo.id}
-            isActive={activeTrackId === trackInfo.id}
-            onPlayRequest={handlePlayRequest}
-          />
-        ))}
-      </div>
-    </section>
+    
 
 
     {/* <section className=" m-0 pt-10 pb-10 bg-[#FFEABE] sm:bg-gradient-to-r bg-[#FFEABE] from-[#F9D593]/60 via-[#FFEABE] to-[#F9D593]/60"
@@ -309,14 +288,25 @@ const Landing = () => {
 
 {/* <button className="mt-3 w-full bg-white flex gap-2 items-center justify-center">Read More <FaAngleDown/></button> */}
 {/* <Audio/> */}
+<div >
+      
+      <SparkMusic
+        onPlayRequest={handlePlayRequest}
+        trackId={"4"}
+        isActive={activeTrackId === "4"}
+      />
+    </div>
+    <div className="mt-20">
 <ProjectTabs
   onPlayRequest={handlePlayRequest}
   trackId={"4"}
   isActive={activeTrackId === "4"}
 />
       </div>
+
       <h1 className="text-left text-[40px] sm:text-[80px] bg-[] font-medium bg-[#F9D593] w-max px-8 mt-20 mx-auto ">MORE PROJECTS</h1>
-      <div className="mt-[50px]">
+     {/* </div>
+     <div className="mt-[50px]">
       <div className="w-full bg-red-400 bg-[#F9D593] shadow-2xl">
       <h3 className="italic text-[30px] px-1 sm:text-[50px] uppercase">spark music champions</h3>
       <img
@@ -334,7 +324,7 @@ const Landing = () => {
     alt="Description of the image"
     className="sm:flex hidden w-full h-full object-cover"
   />
-</div>
+</div> */}
 
 
 
@@ -383,6 +373,29 @@ const Landing = () => {
 
       </div>
         </div>
+    </section>
+    <section className="m-0 pt-10 pb-10 bg-[#FFEABE]" id="music">
+      <h1 className="text-left text-[50px] sm:text-[80px] font-medium bg-[#F7AF5D] w-max mb-10 px-8 mx-auto">
+        MY MUSIC
+      </h1>
+      {/* <p className="text-[20px] sm:text-[30px] w-[90%] sm:w-[60%] m-auto my-2 sm:my-5">
+        Explore three of Tenda’s latest tracks, each defined by his genre-bending production.
+      </p> */}
+      <div className="m-auto w-max pb-10 pt-5 flex flex-col gap-4">
+        {tracksData.map((trackInfo) => (
+          <Track
+            key={trackInfo.id}
+            color={trackInfo.color}
+            title={trackInfo.title}
+            img={trackInfo.img}
+            genre={trackInfo.genre}
+            track={trackInfo.track}
+            trackId={trackInfo.id}
+            isActive={activeTrackId === trackInfo.id}
+            onPlayRequest={handlePlayRequest}
+          />
+        ))}
+      </div>
     </section>
     <section className="h-[200vh] py-[100px] flex flex-col bg-[#F7AF5D]  bg-gradient-to-r from-black from-1% to-20%" >
     <img
