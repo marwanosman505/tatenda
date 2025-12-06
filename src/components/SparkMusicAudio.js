@@ -17,7 +17,8 @@ const Audio = (props) => {
 
   // Example list of audio tracks
   const tracks = [
-    { name: "Spark Music", file: "/audio/SparkMusic.wav" },
+    { name: "The Chief & Thousand Frogs", file: "/audio/TheChiefAndThousandFrogsStory.mp3" },
+    // { name: "Spark Music", file: "/audio/SparkMusic.wav" }
 
   ];
 
