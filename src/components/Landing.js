@@ -223,21 +223,28 @@ const Landing = () => {
           className="h-[80%] sm:block hidden"
         />
 
-        <div className="w-full sm:text-[100px] py-3 mx-8 flex flex-col">
+        <div className="w-full sm:text-[90px] py-3 mx-8 flex flex-col">
           <h1 className="font-medium">
             MY JOURNEY
           </h1>
-          <div className="bg-[#F9D593] text-[22px] py-3 flex flex-col gap-2 sm:px-6 shadow-2xl sm:w-min m-auto">
+          <div className="bg-[#F9D593] text-[20px] py-3 flex flex-col gap-2 sm:px-6 shadow-2xl sm:w-min m-auto">
+            <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+              Born and raised between Zimbabwe and the UK, <b>TENDA</b> is a musician and sound maker whose work draws on African rhythms, lived experience, and live performance. He began as a beat maker and producer and later moved into songwriting as a way to share stories from childhood through to adulthood. At the heart of his practice is connection with people and the creation of work that is compassionate and opens up new experiences for the children, young people, and families he makes work for. His music blends genres and live sound to create work that is grounded, rhythmic, and story led.
+            </p>
+            <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+              <b>TENDA</b> is also an early years musician who designs play based sessions for children aged 0 to 5 and their families. His work centres on sound, movement, and storytelling to support curiosity, listening, and shared musical play. He uses traditional instruments, tactile and everyday objects, and digital tools including field recordings to create rich sensory experiences that invite children, young people, and families to explore sound together.
 
-          <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
-          Born and raised in Zimbabwe, <b>"TENDA"</b> is an artist who blends African influences and personal experiences into musical practices.
-        </p>
-        <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
-        Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
-        </p>
-        <p className="text-justify m-auto w-[80%] sm:w-[700px] hidden bg-[#F9D593] sm:flex">
-          As an early years musician, I also design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I've begun to merge nature and technology by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
-        </p>
+            </p>
+
+            {/* <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+              Born and raised in Zimbabwe, <b>"TENDA"</b> is an artist who blends African influences and personal experiences into musical practices.
+            </p>
+            <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+            Starting out as a beat maker and producer, I soon discovered a passion for songwriting to share stories from my childhood to adulthood. By blending genres and sampling, I craft music that resonates with broad audiences.
+            </p>
+            <p className="text-justify m-auto w-[80%] sm:w-[700px] hidden bg-[#F9D593] sm:flex">
+              As an early years musician, I also design play-based musical experiences for children aged 0–5 and their families, fostering curiosity and creativity through music, movement, and storytelling. I've begun to merge nature and technology by using field recordings and immersive techniques, bringing multi-sensory wonder to spark a lifelong love of music.
+            </p> */}
 
           </div>
         </div>
