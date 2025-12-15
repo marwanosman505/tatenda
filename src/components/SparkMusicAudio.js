@@ -11,7 +11,7 @@ const SparkMusicAudio = (props) => {
 
   const tracks = [
     {
-      name: "The Chief & Thousand Frogs (audio story)",
+      name: "The Chief & Frogs (audio story)",
       file: "/audio/TheChiefAndThousandFrogsStory.mp3",
     },
   ];
@@ -68,7 +68,7 @@ const SparkMusicAudio = (props) => {
 
   return (
     <div className="w-full">
-      <div className="flex items-stretch rounded-xl overflow-hidden shadow-sm bg-white/90 border border-black/10">
+      <div className="flex items-stretch w-full rounded-xl overflow-hidden shadow-sm bg-white/90 border border-black/10">
         {/* Controls */}
         <div className="flex items-center gap-3 px-3 py-2 bg-black/5">
           <button

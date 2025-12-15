@@ -231,7 +231,7 @@ const Landing = () => {
             <p className="text-justify m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
               Born and raised between Zimbabwe and the UK, <b>TENDA</b> is a musician and sound maker whose work draws on African rhythms, lived experience, and live performance. He began as a beat maker and producer and later moved into songwriting as a way to share stories from childhood through to adulthood. At the heart of his practice is connection with people and the creation of work that is compassionate and opens up new experiences for the children, young people, and families he makes work for. His music blends genres and live sound to create work that is grounded, rhythmic, and story led.
             </p>
-            <p className="text-justify hidden sm:flex m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
+            <p className="text-justify hidden sm:block m-auto w-[80%] sm:w-[700px] bg-[#F9D593] ">
               <b>TENDA</b> is also an early years musician who designs play based sessions for children aged 0 to 5 and their families. His work centres on sound, movement, and storytelling to support curiosity, listening, and shared musical play. He uses traditional instruments, tactile and everyday objects, and digital tools including field recordings to create rich sensory experiences that invite children, young people, and families to explore sound together.
 
             </p>

@@ -188,17 +188,17 @@ export default function SparkMusic(props) {
           </h1>
           <p className="mt-3 text-sm sm:text-[16px] text-gray-800 max-w-3xl mx-auto">
             Creative music, sensory play and storytelling experiences for young children and their
-            families — including <span className="font-semibold italic">Spark Music Champions</span> and{" "}
+            families. Including <span className="font-semibold italic">Spark Music Champions</span> and{" "}
             <span className="font-semibold italic">Small Wonders</span>.
           </p>
         </div>
 
         {/* Audio, aligned with header content */}
-        <div className="max-w-xl mx-auto mt-4">
+        <div className="w-full mx-auto mt-4">
           {/* <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-gray-700 mb-2 text-left sm:text-center">
             Listen · Audio story created through this project
           </p> */}
-          <SparkMusicAudio {...sparkAudioProps} />
+          <SparkMusicAudio className='w-full' {...sparkAudioProps} />
         </div>
       </header>
 
