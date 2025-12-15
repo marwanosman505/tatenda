@@ -4,13 +4,14 @@ import './App.css';
 import Landing from './components/Landing';
 import Main from './components/Main';
 import { Analytics } from '@vercel/analytics/react'
+import { ModalProvider } from './context/ModalContext';
 
 function App() {
   return (
-    <div className="App">
+    <ModalProvider>
       <Main/>
       <Analytics/>
-    </div>
+    </ModalProvider>
   );
 }
 
